@@ -7,10 +7,7 @@ const resultado = document.getElementById("resultado")
 
 
 function calcularImc(){
-    if(nome != "" || altura != "" || peso!=""){
-        resultado.textContent = "Preencha todos os campos!!!"
-    }
-    else{
+   
         var imc = (peso.value / altura.value**2).toFixed(1)
         
         if(imc < 18.4){
@@ -31,7 +28,6 @@ function calcularImc(){
         else if(imc >= 40){
             resultado.textContent = nome.value + " seu IMC é " + imc + " e você esta com Obesidade III"
         }
-    }
 }
 
 calcular.addEventListener("click", calcularImc)
