@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cor-destaque: #FCC91C;
+}
+
+
+body{
+    height: 100vh;
+    width: 100vw;
+    /*atribuindo display para flex*/
+    display: flex;
+    /* Definindo a organização dos elementos para column(horizontal) */
+    flex-direction:column;
+    background-image: url(../img/background.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #000A;
+    /*mesclar back color com img*/
+    background-blend-mode: darken;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+/*    background-color: aquamarine;*/
+    height: 100px;
+    display:flex;
+    /*Alinhando conteudo no centro (horizontalmente)*/
+    justify-content: center;
+    /*Alinhando conteudo em baixo (verticalmente)*/
+    align-items: flex-end;
+}
+main{
+/*    background-color: brown;*/
+    /*"força" */
+    flex-grow: 1;
+    display: flex;
+}
+section{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    font-size: 3rem;  
+    font-weight: 400;
+}
+.categorias{
+/*    background-color: aqua;*/
+}
+.categorias table{
+    font-size: 1.5rem;
+    border-spacing: 4px;
+}
+.categorias th{
+    /* utilizando cor através de uma variavel */
+    background-color: var(--cor-destaque);
+    height: 50px;
+    width: 500px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    
+}
+.categorias td{
+    background-color: var(--cor-destaque);
+    height: 50px;
+    width: 250px;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 300;
+}
+.calculadora form{
+/*    background-color: brown;*/
+    display: flex;
+    flex-direction: column;
+    /*   separar elementos dentro do flex */
+    gap:10px;
+    width: 300px;
+}
+.calculadora label{
+    color: white;
+}
+/*atribuindo estilização as divs com .formitens e .unidade(before ou after criam elementos)*/
+.calculadora .formItens.unidade::before{
+    content: attr(data-unidade);
+    color: black;
+    /*se refere a um objeto com posição estatica, por isso definimos um elemento pai como relative    */
+    position: absolute;
+    background-color: var(--cor-destaque);
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    width: 60px;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.formItens{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.formItens input{
+    height: 50px;
+    outline: none;
+    border: 2px solid var(--cor-destaque);
+    background-color: transparent;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+}
+.calculadora button{
+    border:none;
+    height: 50px;
+    background-color: var(--cor-destaque);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+#resultado{
+    height: 100px;
+    background-color: var(--cor-destaque);
+    font-size: 1rem;
+    border-radius: 5px;
+    padding: 10px;
+}
+footer{
+/*    background-color: cornflowerblue;*/
+    height: 40px;
+    color: white;
+    font-style: italic;
+    text-align: center;
+    font-size: .8rem;
+}
+/*Responsividade*/
+@media (max-width: 768px){
+    body{
+        height: 150vh;
+        background-attachment: fixed;
+    }
+    main{
+    /* inverter ordem */
+        flex-direction:column-reverse;
+        
+    }
+    section{
+        height: 75vh;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .calculadora form{
+        width: 80%;
+    }
+    .categorias table{
+        width: 80%;
+    }
+}

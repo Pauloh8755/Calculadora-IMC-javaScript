@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Aula 02 - IMC</title>
+        <meta charset="utf-8">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <script src="js/imc.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Calcule seu IMC</h1>
+        </header>
+        <main id="">
+            <section class="categorias">
+                <table>
+                    <!-- temos tags semanticas sendo "thead" para cabeçalho da table e "tbody" para o corpo-->
+                    <thead>
+                        <tr>
+                            <!-- para criar uma celula temos a tag semantica th para titulo -->
+                            <th colspan="2">
+                                Categorias
+                            </th>
+                        </tr>
+                    </thead>  
+                    <tbody>
+                        <tr>
+                            <td>IMC abaixo de 18,5</td>
+                            <td>Abaixo do peso</td>
+                        </tr>
+                        <tr>
+                            <td>IMC 18,5 - 24,9</td>
+                            <td>Peso normal
+                        </tr>
+                        <tr>
+                            <td>IMC 24,9 - 29,9</td>
+                            <td>Acima do Peso </td>
+                        </tr>
+                        <tr>
+                            <td>IMC 30,0 - 34,9</td>
+                            <td>Obesidade grau I</td>
+                        </tr>
+                        <tr>
+                            <td>IMC 34,9 - 39,9</td>
+                            <td>Obesidade grau II</td>
+                        </tr>
+                        <tr>
+                            <td>IMC maiores que 40</td>
+                            <td>Obesidade grau III</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section class="calculadora">
+                <form>
+                    <div class="formItens">
+                        <label>
+                            Nome:
+                        </label>
+                        <input type="text" id="txtNome">
+                    </div>
+                    <div class="formItens unidade" data-unidade="metros">
+                        <label>
+                            Altura:
+                        </label>
+                        <input type="text" id="numAltura" >
+                    </div>
+                    <div class="formItens unidade" data-unidade="kilos">
+                        <label>
+                            Peso:
+                        </label>
+                        <input type="text" id="numPeso">
+                    </div>
+                    <button type="button" id="calcular">
+                        Calcular
+                    </button>
+                    <div id="resultado">
+                    
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer id="">
+            <span>Copyright &copy; 2021 | Paulo Henrique</span>
+        </footer>
+    </body>
+</html>
