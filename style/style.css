@@ -125,6 +125,9 @@ h1{
     border-radius: 5px;
     font-size: 1rem;
 }
+.calculadora button:hover{
+    cursor: pointer;
+}
 #resultado{
     height: 100px;
     background-color: var(--cor-destaque);
