@@ -135,6 +135,12 @@ h1{
     border-radius: 5px;
     padding: 10px;
 }
+.green{
+    color: #04B45F;
+}
+.red{
+    color: #ff0000;
+}
 footer{
 /*    background-color: cornflowerblue;*/
     height: 40px;

@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,300&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" type="text/css" href="style/style.css">
-        <script src="js/imc.js" defer></script>
+        <script src="js/professor.js" defer></script>
     </head>
     <body>
         <header>
@@ -61,19 +61,21 @@
                         <label>
                             Nome:
                         </label>
-                        <input type="text" id="txtNome">
+                        <!-- pattern ="[^0-9]" negando numeros no input    -->
+                        <input type="text" id="txtNome" required pattern="[^0-9]*">
                     </div>
                     <div class="formItens unidade" data-unidade="metros">
                         <label>
                             Altura:
                         </label>
-                        <input type="text" id="numAltura" >
+                        <!--       step = "any" aceitar qualquer decimal definimos max e min      -->
+                        <input type="number" min="0" max="2.5" step="any" id="numAltura" required>
                     </div>
                     <div class="formItens unidade" data-unidade="kilos">
                         <label>
                             Peso:
                         </label>
-                        <input type="text" id="numPeso">
+                        <input type="number"   id="numPeso" required>
                     </div>
                     <button type="button" id="calcular">
                         Calcular

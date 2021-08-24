@@ -7,7 +7,7 @@ function calcularImc(){
     const altura = document.getElementById("numAltura").value
     const peso = document.getElementById("numPeso").value
     
-    var imc = (peso / altura).toFixed(1)
+    var imc = (peso / altura**).toFixed(1)
         
     
     if( nome == "" || peso == "" || altura == ""){
